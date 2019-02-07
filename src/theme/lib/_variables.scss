@@ -1,0 +1,119 @@
+/*-----------------------------
+    $COLORS
+------------------------------*/
+
+/**
+* Branding Colors
+*/
+
+$color-primary: #bae1ff;
+$color-secondary: #ffb3ba;
+
+$color-black: #000000;
+$color-grey: #737373;
+$color-darkgrey: darken($color-grey, 25%);
+$color-lightgrey: lighten($color-grey, 25%);
+$color-white: #ffffff;
+
+$color-border: $color-darkgrey;
+/**
+* Alert Colors
+*/
+
+$color-danger: #e45b1c;
+$color-invert: invert($color-danger);
+$color-warning: #ffdfba;
+$color-info: #028ccc;
+$color-success:#baffc9;
+
+/**
+* Shadow Colors
+*/
+
+$color-lightshadow: rgba(0, 0, 0, .3);
+$color-shadow: rgba(0, 0, 0, .5);
+$color-darkshadow: rgba(0, 0, 0, .8);
+
+/**
+* Other Colors
+*/
+
+$color-link: #028ccc;
+
+/*-----------------------------
+    $FONTS
+------------------------------*/
+
+/**
+* Font Sizes
+*/
+
+$font-size-h1: 1em;
+$font-size-h2: 1em;
+$font-size-h3: 1em;
+$font-size-h4: 1em;
+$font-size-h5: 1em;
+$font-size-p: 1em;
+$font-size-p-secondary: 1em;
+
+/**
+* Font family
+*/
+$font-default: 'Lato', sans-serif;
+$font-size: 16px;
+$font-primary: Arial;
+$font-secondary: Verdana;
+$font-tertiary: Tahoma;
+$baseheadingfont: $font-default;
+$baseheadingfontweight: bold;
+$altfont : Georgia, Times, "Times New Roman";
+$codefont : "Courier New", monospace;
+$lineheight: 1.5;
+$textcolor: $color-black;
+$color-background: darken($color-white, 5);
+
+/*-----------------------------
+    $BOX
+------------------------------*/
+
+/**
+* $PADDING
+*/
+
+$padding-extra: 60px;
+$padding-high: 40px;
+$padding-medium: 20px;
+$padding-small: 10px;
+$padding-tiny: 5px;
+
+/**
+* $MARGIN
+*/
+
+$margin-extra: 60px;
+$margin-high: 40px;
+$margin-medium: 20px;
+$margin-small: 10px;
+$margin-tiny: 5px;
+
+$page-max-width: 100%;
+
+/**
+* BUTTON
+*/
+
+$button-color: $color-white;
+$button-background-color: $color-primary;
+$button-font-size: $font-size * 1.5;
+
+
+
+// constantes
+
+$border-radius: 4px;
+
+$border-radius-extra: 60px;
+$border-radius-high: 40px;
+$border-radius-medium: 20px;
+$border-radius-small: 10px;
+$border-radius-tiny: 5px;

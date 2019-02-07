@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
+// Mixins
+@import 'theme/lib/variables';
+@import 'theme/lib/mixins';
+@import 'theme/lib/general';
+@import 'theme/components/buttons'
