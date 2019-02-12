@@ -7,17 +7,20 @@
 .tabs {
   display: grid;
   grid-template-areas: "part-1"
-    "part-2";
+                      "part-2";
   justify-content: center;
   align-content: space-between;
   background: rgba(138, 250, 250, 0.527);
   height: 86vh;
 
-  @include respond-to(780px){
+  @include respond-to(768px){
     grid-template-areas: "part-1 part-2";
     align-content: center;
-    grid-auto-flow: rows;
-    height: 20vh;
+    // grid-auto-flow: column;
+    height: 10vh;
+    & .title {
+      display: none;
+    }
   }
 }
 
@@ -25,12 +28,15 @@
   grid-area: part-1;
   display: grid;
   padding-top: 50px;
+  grid-template-areas: "home"
+                      "profile"
+                      "news";
 
-  @include respond-to(780px){
+  @include respond-to(768px){
     padding-top: 10px;
     font-size: 10px; 
     justify-content: center;
-    grid-template-areas: "home porfile news"
+    grid-template-areas: "home profile news"
 
   }
 }
@@ -39,8 +45,8 @@
   grid-area: home
 }
 
-.porfile {
-  grid-area: porfile;
+.profile {
+  grid-area: profile;
 }
 
 .news {
@@ -53,8 +59,7 @@ p {
 
 .part-2 {
   grid-area: part-2;
-  @include respond-to(780px){
-    display: flex;
+  @include respond-to(768px){
     padding-top: 10px;
     font-size: 10px; 
   }

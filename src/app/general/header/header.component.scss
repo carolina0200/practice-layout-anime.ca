@@ -1,3 +1,9 @@
+@mixin respond-to($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
 .header-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -5,7 +11,13 @@
   background: #f3e6efd0;
   width: 100vw;
   height: 14vh;
+
   // box-shadow: 2px 2px 10px #666;          /* Sombra normal */
+  @include respond-to(768px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "badge-page profile profile "
+      "form-message form-message form-message ";
+  }
 }
 
 .badge-page {
@@ -15,17 +27,20 @@
 
   & .badge-img {
     align-self: center;
+  
+    & img {
+      max-width: 60px;
+    }
   }
 
-  & .badge-img img {
-    max-width: 60px;
-  }
 
   & .badge-title p {
     color: white;
     -webkit-text-stroke: 1px #12616e8f;
     font-size: 27px;
   }
+
+
 }
 
 .form-message {
@@ -45,6 +60,7 @@
       color: rgba(182, 182, 182, 0.822);
     }
   }
+
   ;
 
   & button {
@@ -59,6 +75,11 @@
       background: #4bd3eb;
     }
   }
+
+  @include respond-to(768px) {
+    display: none;
+  }
+
 }
 
 
@@ -82,5 +103,17 @@
     font-size: 20px;
     align-self: center;
     font-weight: 300;
+  }
+
+  @include respond-to(411px) {
+    & .profile-name {
+      display: none;
+    }
+  }
+
+  @include respond-to(768px){
+    & .profile-name {
+      font-size: 10px;
+    }
   }
 }

@@ -11,7 +11,11 @@
 
     margin: 20px;
 
-    @include respond-to(780px){
+    @include respond-to(768px){
+        grid-template-columns: repeat(2,  1fr);
+    }
+
+    @include respond-to(411px){
         grid-gap: 5px;
         grid-auto-flow: rows;
         grid-template-columns: 100%

@@ -12,7 +12,7 @@
                          "tabs content";
     height: 100vh;
 
-    @include respond-to(780px){
+    @include respond-to(768px){
         grid-template-columns: 100%;
         grid-template-areas: "header"
                             "content"
