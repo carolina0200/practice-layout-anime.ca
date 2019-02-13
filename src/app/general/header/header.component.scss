@@ -1,14 +1,15 @@
 @mixin respond-to($width) {
   @media only screen and (max-width: $width) {
-    @content;
+      @content;
   }
 }
 
-.header-container {
+.header {
   display: grid;
+  background: #f3e6efd0;
   grid-template-columns: repeat(5, 1fr);
   grid-template-areas: "badge-page form-message  form-message  form-message profile";
-  background: #f3e6efd0;
+
   width: 100vw;
   height: 14vh;
 
@@ -18,7 +19,45 @@
     grid-template-areas: "badge-page profile profile "
       "form-message form-message form-message ";
   }
+
+  & .profile {
+    grid-area: profile;
+    justify-self: end;
+    display: flex;
+    align-self: center;
+    padding: 0 20px;
+    margin-right: 15px;
+  
+    & .profile-photo img {
+      border-radius: 50%;
+      max-width: 50px;
+      margin: 5px;
+    }
+  
+    ;
+  
+    & .profile-name {
+      font-size: 20px;
+      align-self: center;
+      font-weight: 300;
+    }
+  
+    @include respond-to(411px) {
+      & .profile-name {
+        display: none;
+      }
+    }
+  
+    @include respond-to(768px) {
+      & .profile-name {
+        font-size: 10px;
+      }
+    }
+  }
 }
+
+
+
 
 .badge-page {
   grid-area: badge-page;
@@ -27,13 +66,10 @@
 
   & .badge-img {
     align-self: center;
-  
     & img {
       max-width: 60px;
     }
   }
-
-
   & .badge-title p {
     color: white;
     -webkit-text-stroke: 1px #12616e8f;
@@ -46,8 +82,6 @@
 .form-message {
   grid-area: form-message;
   align-self: center;
-
-
   & input {
     width: 85%;
     padding: 10px;
@@ -60,9 +94,6 @@
       color: rgba(182, 182, 182, 0.822);
     }
   }
-
-  ;
-
   & button {
     background: #4bd3eb8f;
     padding: 10px;
@@ -80,40 +111,4 @@
     display: none;
   }
 
-}
-
-
-.profile {
-  grid-area: profile;
-  justify-self: end;
-  display: flex;
-  align-self: center;
-  padding: 0 20px;
-  margin-right: 15px;
-
-  & .profile-photo img {
-    border-radius: 50%;
-    max-width: 50px;
-    margin: 5px;
-  }
-
-  ;
-
-  & .profile-name {
-    font-size: 20px;
-    align-self: center;
-    font-weight: 300;
-  }
-
-  @include respond-to(411px) {
-    & .profile-name {
-      display: none;
-    }
-  }
-
-  @include respond-to(768px){
-    & .profile-name {
-      font-size: 10px;
-    }
-  }
 }
